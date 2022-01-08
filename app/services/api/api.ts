@@ -5,7 +5,7 @@ import * as Types from "./api.types"
 import uuid from "react-native-uuid"
 import { getGeneralApiProblem } from "./api-problem"
 
-const API_PAGE_SIZE = 50
+const API_PAGE_SIZE = 5
 
 const convertQuestion = (raw: any): QuestionSnapshot => {
   const id = uuid.v1().toString()
@@ -75,6 +75,7 @@ export class Api {
     try {
       const rawQuestions = response.data.results
       const convertedQuestions: QuestionSnapshot[] = rawQuestions.map(convertQuestion)
+      console.tron.log(convertedQuestions.length)
       return { kind: "ok", questions: convertedQuestions }
     } catch (e) {
       __DEV__ && console.tron.log(e.message)

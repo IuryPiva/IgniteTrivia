@@ -1,6 +1,7 @@
 import { flow, Instance, SnapshotOut, types } from "mobx-state-tree"
-import { Question, QuestionModel, QuestionSnapshot, withEnvironment } from ".."
 import { GetQuestionsResult } from "../../services/api/api.types"
+import { Question, QuestionModel, QuestionSnapshot } from "../question/question"
+import { withEnvironment } from "../extensions/with-environment"
 
 /**
  * Model description here for TypeScript hints.
