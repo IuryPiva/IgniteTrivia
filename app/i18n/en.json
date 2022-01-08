@@ -36,5 +36,8 @@
   "storybook": {
     "placeholder": "Placeholder",
     "field": "Field"
+  },
+  "questionScreen": {
+    "header": "Questions"
   }
 }
